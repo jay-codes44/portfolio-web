@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Jay Mangukiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav class="dock project-dock"><a href="index.html#home" aria-label="Home">⌂</a><a href="index.html#projects" aria-label="Projects">□</a><a href="index.html#contact" aria-label="Contact">✎</a></nav>
+  <main class="project-page">
+    <a class="back-link" href="index.html#projects">← Back to projects</a>
+    <header class="project-hero">
+      <p class="eyebrow" id="project-category">PROJECT CASE STUDY</p>
+      <h1 class="display"><span id="project-title">Project</span><em id="project-subtitle">Details</em></h1>
+      <p class="project-lead" id="project-lead"></p>
+    </header>
+    <div class="project-layout">
+      <section>
+        <div class="case-visual" id="case-visual"></div>
+        <h2>THE IDEA</h2>
+        <p id="project-description"></p>
+        <div class="detail-grid">
+          <div><span>THE CHALLENGE</span><p id="project-challenge"></p></div>
+          <div><span>THE APPROACH</span><p id="project-approach"></p></div>
+        </div>
+        <h2>WHAT I BUILT</h2>
+        <ul id="project-features"></ul>
+        <h2>PROJECT PREVIEW</h2>
+        <div class="preview-gallery" id="preview-gallery" aria-label="Project interface previews"></div>
+        <h2>THE RESULT</h2>
+        <p id="project-result"></p>
+      </section>
+      <aside class="project-meta">
+        <div><span>ROLE</span><strong id="project-role"></strong></div>
+        <div><span>TECHNOLOGY</span><strong id="project-tech"></strong></div>
+        <div><span>STATUS</span><strong id="project-status"></strong></div>
+        <div><span>TIMELINE</span><strong id="project-timeline"></strong></div>
+        <a class="case-cta" href="index.html#contact">Discuss a project ↗</a>
+      </aside>
+    </div>
+  </main>
+  <script>
+    const projects = {
+      pathfinder: { title: "PATHFINDER", subtitle: "ALGORITHM VISUALIZER", category: "JAVASCRIPT PROJECT", lead: "A visual way to understand how pathfinding algorithms explore a grid and find the shortest route.", description: "Pathfinder turns an abstract data-structures lesson into an interactive experience. Users can draw walls, choose an algorithm, and watch every step happen in real time.", challenge: "Pathfinding is easy to understand on paper but difficult to imagine while an algorithm is running. The project needed to make each visited node and final route obvious.", approach: "I separated the grid state from the animation state, then built small controls around that model so the visualizer stays responsive while the algorithm runs.", result: "The final experience makes BFS, DFS, and Dijkstra easy to compare and gives learners an immediate visual explanation of the trade-offs.", features: ["Animated BFS, DFS, and Dijkstra traversal", "Interactive walls, start points, and finish points", "Responsive layout for desktop and mobile"], role: "Designer & developer", tech: "JavaScript · HTML · CSS", timeline: "3 weeks", status: "Completed · 2026", color: "visual-orange", images: ["project-pathfinder.svg"] },
+      "campus-connect": { title: "CAMPUS", subtitle: "CONNECT", category: "FULL-STACK PROJECT", lead: "A student-first social feed for sharing events, opportunities, and useful campus updates.", description: "CampusConnect was designed around the small moments students usually miss: club events, study groups, and useful announcements. The interface keeps discovery quick and conversation simple.", challenge: "Campus information is usually scattered across chat groups and notice boards, which makes useful opportunities easy to miss.", approach: "I organized the product around a focused feed, clear categories, and a simple API boundary between the React interface and server data.", result: "CampusConnect gives students one calm place to discover what is happening, save useful posts, and share updates with their community.", features: ["Student profiles and post creation", "Event discovery with category filters", "REST API with a clean responsive React interface"], role: "Frontend developer", tech: "React · Node.js · Express", timeline: "5 weeks", status: "Completed · 2025", color: "visual-lime", images: ["project-campus-connect.svg"] },
+      studyhub: { title: "STUDYHUB", subtitle: "COLLABORATIVE WORKSPACE", category: "PRODUCTIVITY PROJECT", lead: "A focused workspace for planning study sessions, sharing notes, and keeping group projects moving.", description: "StudyHub combines a simple task board with shared resources so students can move from planning to progress without switching between several tools.", challenge: "Students often use separate apps for notes, tasks, and group discussions, creating friction before the actual studying begins.", approach: "I reduced the experience to three core areas: a shared room, a task list, and a searchable notes space. Each screen is designed to answer one question quickly.", result: "StudyHub turns a scattered study workflow into a single lightweight workspace that feels approachable for both solo and group work.", features: ["Shared study rooms and notes", "Task lists with progress states", "Accessible, keyboard-friendly interface"], role: "Product developer", tech: "React · Firebase · CSS", timeline: "4 weeks", status: "Completed · 2025", color: "visual-purple", images: ["project-studyhub.svg"] },
+      weatherly: { title: "WEATHERLY", subtitle: "LIVE DASHBOARD", category: "API PROJECT", lead: "A clear weather dashboard that makes the forecast easy to scan before heading out.", description: "Weatherly uses live API data and a deliberately calm visual hierarchy. Location, temperature, and upcoming conditions are presented in the order people need them.", challenge: "Weather data can be overwhelming when every metric receives the same visual weight, especially on a small screen.", approach: "I prioritized current conditions first, followed by the forecast, and added explicit loading and error states so the interface always explains what is happening.", result: "Weatherly delivers a quick, readable forecast while demonstrating reliable API handling and thoughtful empty-state design.", features: ["Live location-based weather data", "Seven-day forecast and condition states", "Loading and error states for unreliable networks"], role: "Frontend developer", tech: "JavaScript · REST API", timeline: "2 weeks", status: "Completed · 2025", color: "visual-teal", images: ["project-weatherly.svg"] },
+      taskflow: { title: "TASKFLOW", subtitle: "KANBAN MANAGER", category: "WEB APP PROJECT", lead: "A lightweight Kanban board for turning a long list of tasks into a clear next step.", description: "TaskFlow keeps project management intentionally lightweight. Cards can move between stages, remain persistent, and stay readable on smaller screens.", challenge: "Large productivity tools can make a simple task feel like an administrative chore, so the board needed to stay fast and focused.", approach: "I designed a short capture flow, clear column states, and persistent storage so users can add a task in seconds and return to the same board later.", result: "TaskFlow makes progress visible without adding unnecessary complexity, while demonstrating component state, persistence, and interaction design.", features: ["Drag-and-drop task columns", "Persistent tasks with Firebase", "Quick-add flow for capturing ideas"], role: "App developer", tech: "React · Firebase", timeline: "3 weeks", status: "Completed · 2025", color: "visual-red", images: ["project-taskflow.svg"] }
+    };
+    const data = projects[new URLSearchParams(location.search).get("project")] || projects.pathfinder;
+    document.title = `${data.title} — Jay Mangukiya`;
+    document.querySelector("#project-category").textContent = data.category;
+    document.querySelector("#project-title").textContent = data.title;
+    document.querySelector("#project-subtitle").textContent = data.subtitle;
+    document.querySelector("#project-lead").textContent = data.lead;
+    document.querySelector("#project-description").textContent = data.description;
+    document.querySelector("#project-challenge").textContent = data.challenge;
+    document.querySelector("#project-approach").textContent = data.approach;
+    document.querySelector("#project-result").textContent = data.result;
+    document.querySelector("#project-role").textContent = data.role;
+    document.querySelector("#project-tech").textContent = data.tech;
+    document.querySelector("#project-status").textContent = data.status;
+    document.querySelector("#project-timeline").textContent = data.timeline;
+    document.querySelector("#case-visual").className = `case-visual ${data.color}`;
+    document.querySelector("#preview-gallery").classList.add(data.color);
+    document.querySelector("#preview-gallery").innerHTML = data.images.map((image) => `<img class="project-photo" src="${image}" alt="${data.title} project interface preview">`).join("");
+    document.querySelector("#project-features").innerHTML = data.features.map((feature) => `<li>${feature}</li>`).join("");
+  </script>
+</body>
+</html>
