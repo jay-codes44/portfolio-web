@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dino Runner AI — Jay Mangukiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="brand-dot">✳</span>Jay Mangukiya</a>
+    <nav class="pill">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right"><a class="btn sm" href="index.html#work">All projects</a></div>
+  </header>
+
+  <section class="proj-hero">
+    <div class="proj-inner">
+      <a class="crumb" href="index.html">← Back to portfolio</a>
+      <p class="proj-kicker">Project 02 — Python · OpenCV · PyAutoGUI</p>
+      <h1>Dino Runner AI</h1>
+      <p class="proj-lede">A bot that plays Chrome's offline dinosaur game by watching the screen — no game API, no hacks. Just pixels in, keypresses out.</p>
+      <div class="proj-links">
+        <a class="btn" href="https://github.com/jaymangukiya/dino-runner-ai" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn light" href="project3.html">Next project →</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="proj-main">
+    <section class="fade">
+      <h2>The problem</h2>
+      <p>My high score was 743 and I refused to grind for it by hand. The real question was more fun: <em>can a program see the game the way I do — just pixels — and react faster than a human?</em></p>
+    </section>
+    <section class="fade">
+      <h2>What it does</h2>
+      <ul class="feature-list">
+        <li><span class="check">✓</span><div><strong>Screen capture loop</strong> — grabs the game region ~30 times a second.</div></li>
+        <li><span class="check">✓</span><div><strong>Obstacle detection</strong> — scans for dark pixel clusters ahead of the dino, no ML needed.</div></li>
+        <li><span class="check">✓</span><div><strong>Adaptive jumping</strong> — distance-based thresholds for cacti vs. flying pterodactyls.</div></li>
+        <li><span class="check">✓</span><div><strong>Personal best:</strong> 3,000+ — it stops when I beg it to.</div></li>
+      </ul>
+    </section>
+    <section class="fade">
+      <h2>Built with</h2>
+      <div class="tags"><span>Python</span><span>OpenCV</span><span>PyAutoGUI</span><span>NumPy</span></div>
+    </section>
+    <section class="fade">
+      <h2>What I learned</h2>
+      <p>That the frame rate of your loop *is* the difficulty of the problem, how image thresholding turns "looking" into simple math, and why sleeping 50 ms too long means a face full of cactus. My first taste of computer vision — and it was delicious.</p>
+    </section>
+    <div class="proj-nav fade">
+      <a href="project1.html">← Bunk-Meter</a>
+      <a href="project3.html">Next: SplitWiser →</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

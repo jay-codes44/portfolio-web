@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SplitWiser — Jay Mangukiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="brand-dot">✳</span>Jay Mangukiya</a>
+    <nav class="pill">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right"><a class="btn sm" href="index.html#work">All projects</a></div>
+  </header>
+
+  <section class="proj-hero">
+    <div class="proj-inner">
+      <a class="crumb" href="index.html">← Back to portfolio</a>
+      <p class="proj-kicker">Project 03 — JavaScript · Chart.js · localStorage</p>
+      <h1>SplitWiser</h1>
+      <p class="proj-lede">Expense splitting for hostel roommates: who owes whom, settled with the fewest possible transactions. Zero backend — it all runs in the browser.</p>
+      <div class="proj-links">
+        <a class="btn" href="https://github.com/jaymangukiya/splitwiser" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn light" href="project1.html">Next project →</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="proj-main">
+    <section class="fade">
+      <h2>The problem</h2>
+      <p>Four roommates, one WiFi bill, shared groceries, and a whiteboard full of "I'll pay you later." Keeping track of who owes whom was harder than any assignment — so I made the whiteboard an app.</p>
+    </section>
+    <section class="fade">
+      <h2>What it does</h2>
+      <ul class="feature-list">
+        <li><span class="check">✓</span><div><strong>Add expenses fast</strong> — split equally or pin custom shares per person.</div></li>
+        <li><span class="check">✓</span><div><strong>Smart settle-up</strong> — minimum-transactions algorithm, so A→B→C collapses into one payment.</div></li>
+        <li><span class="check">✓</span><div><strong>Balance charts</strong> — who's the group's bank, visualized with Chart.js.</div></li>
+        <li><span class="check">✓</span><div><strong>Works offline</strong> — everything saved in localStorage. No server, no accounts, no excuses.</div></li>
+      </ul>
+    </section>
+    <section class="fade">
+      <h2>Built with</h2>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span><span>localStorage</span></div>
+    </section>
+    <section class="fade">
+      <h2>What I learned</h2>
+      <p>Modeling app state without a framework forces you to actually understand data structures. The min-cash-flow greedy algorithm was the first "real" algorithm I implemented from a paper — and watching four debts become one transaction never gets old.</p>
+    </section>
+    <div class="proj-nav fade">
+      <a href="project2.html">← Dino Runner AI</a>
+      <a href="project1.html">Next: Bunk-Meter →</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

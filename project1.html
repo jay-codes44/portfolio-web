@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bunk-Meter — Jay Mangukiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="brand-dot">✳</span>Jay Mangukiya</a>
+    <nav class="pill">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right"><a class="btn sm" href="index.html#work">All projects</a></div>
+  </header>
+
+  <section class="proj-hero">
+    <div class="proj-inner">
+      <a class="crumb" href="index.html">← Back to portfolio</a>
+      <p class="proj-kicker">Project 01 — Python · SQLite · Telegram Bot</p>
+      <h1>Bunk-Meter</h1>
+      <p class="proj-lede">A Telegram bot that answers the most important question of college life: "Can I skip tomorrow's lecture?" — with math, not vibes.</p>
+      <div class="proj-links">
+        <a class="btn" href="https://github.com/jaymangukiya/bunk-meter" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn light" href="project2.html">Next project →</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="proj-main">
+    <section class="fade">
+      <h2>The problem</h2>
+      <p>Every engineering student knows the 11 PM panic: <em>"How many classes have I missed? Can I afford one more bunk?"</em> Doing that math in your head at midnight is how 75% becomes 71%. I wanted a tool that just tells me the answer.</p>
+    </section>
+    <section class="fade">
+      <h2>What it does</h2>
+      <ul class="feature-list">
+        <li><span class="check">✓</span><div><strong>Per-subject ledger</strong> — log attended / missed lectures with one command.</div></li>
+        <li><span class="check">✓</span><div><strong>Safe-bunks calculator</strong> — "you can skip 4 more Data Structures classes" — exact, per subject.</div></li>
+        <li><span class="check">✓</span><div><strong>Daily Telegram digest</strong> — every morning: attendance % + today's risk list.</div></li>
+        <li><span class="check">✓</span><div><strong>Red alerts</strong> — the moment a subject drops below 75%, it nags you until you show up.</div></li>
+      </ul>
+    </section>
+    <section class="fade">
+      <h2>Built with</h2>
+      <div class="tags"><span>Python</span><span>SQLite</span><span>python-telegram-bot</span><span>cron</span></div>
+    </section>
+    <section class="fade">
+      <h2>What I learned</h2>
+      <p>Designing my first database schema (and rewriting it twice), datetime math that doesn't lie, and how a cron job quietly does work while I sleep. Also that users — even roommates — always type commands you never expected.</p>
+    </section>
+    <div class="proj-nav fade">
+      <a href="project3.html">← SplitWiser</a>
+      <a href="project2.html">Next: Dino Runner AI →</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
